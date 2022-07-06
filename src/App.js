@@ -32,7 +32,7 @@ function App() {
        <Route path="/graphs/:id" element={<Graph sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> }/>
        <Route path="/previewgraphs" element={<Layout><PreviewBeforeAfter sent={sent} setSent={setSent} title={title} setTitle={setTitle}/></Layout> }/>
        <Route path="/previewfourgraphs" element={<Layout><PreviewQuad sent={sent} setSent={setSent} title={title} setTitle={setTitle}/></Layout> }/>
-        {/* <Route path="*" element={<Navigate to="/title"/> }/> */}
+        <Route path="*" element={<Navigate to="/title"/> }/>
       </Routes>
     </div>
   );
