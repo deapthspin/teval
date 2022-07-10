@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/teval/static/css/main.0872449c.css",
-    "main.js": "/teval/static/js/main.3d9f2fb2.js",
+    "main.css": "/teval/static/css/main.c9ddb9cb.css",
+    "main.js": "/teval/static/js/main.5ac1cdbd.js",
     "index.html": "/teval/index.html",
-    "main.0872449c.css.map": "/teval/static/css/main.0872449c.css.map",
-    "main.3d9f2fb2.js.map": "/teval/static/js/main.3d9f2fb2.js.map"
+    "main.c9ddb9cb.css.map": "/teval/static/css/main.c9ddb9cb.css.map",
+    "main.5ac1cdbd.js.map": "/teval/static/js/main.5ac1cdbd.js.map"
   },
   "entrypoints": [
-    "static/css/main.0872449c.css",
-    "static/js/main.3d9f2fb2.js"
+    "static/css/main.c9ddb9cb.css",
+    "static/js/main.5ac1cdbd.js"
   ]
 }
