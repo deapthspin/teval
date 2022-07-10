@@ -177,17 +177,45 @@ const PreviewForm = () => {
                 
                 let response = await fetch('https://formcreationapppostgresql.herokuapp.com/questions')
                 let data2 = await response.json()
-                   
-                console.log(data2)
+
                         for(const key in data2) {
                             if((data2[key].formid * 1) === formIds[i] && !realForms.includes(form[i])) {
-                                realForms.push(form[i])
-                                forms.push(form[i])
+                                
+                                // if(form[i].split('-')[1] === 'before') {
+                                    
+                                //     realForms.push(`${form[i].split('-')[0]}`)
+                                //     forms.push(`${form[i].split('-')[0]}`)
+
+                                // } else if(form[i].split('-')[1] === 'after') {
+                                //     realForms.push(`${form[i].split('-')[0]}`)
+                                //     forms.push(`${form[i]}`)
+                                // } 
+
+                                // if(form[i].split('-')[1] === 'after') {
+                                //     console.log(form[i].split('boss'))
+
+                                //     if(form[i].split('boss').length > 1) {
+                                //         console.log('boss')
+                                //         realForms.push(`${form[i]}-360-after`)
+                                //         forms.push(`${form[i]}-360-after`)
+                                //     } else {
+                                //         forms.push(form[i])
+                                //         realForms.push(form[i])
+
+                                //     }
+                                        forms.push(form[i])
+                                        realForms.push(form[i])
+                                    
+                                    
+                               
+
+
+                                
                             }
                             // setForms(realForms)
                           
                         }
-                        
+                        console.log(realForms, forms)
                     
                 
                 
@@ -245,7 +273,6 @@ const PreviewForm = () => {
     function sendToForm(e) {
         console.log(e.target)
         setSearched(searched = e.target.textContent.toLowerCase())
-        console.log(searched, 'A')
         submit()
         
     }
@@ -324,8 +351,8 @@ const PreviewForm = () => {
                 
                 {questions.length > 0 && <ol className='formNquestions'>
                     {questions.length > 0 && <Button variant='contained' className='deleteForm' onClick={deleteForm}>Delete</Button>}
-                    {/* {questions.length > 0 && <Button variant='contained' className='oneForm' onClick={previewThisForm}>Preview this form</Button>} */}
-                    {questions.length > 0 && <Button variant='contained' className='formGraph' onClick={formCharts}>Graph</Button>}
+                    {questions.length > 0 && <Button variant='contained' className='oneForm' onClick={previewThisForm}>Preview this form</Button>}
+                    {/* {questions.length > 0 && <Button variant='contained' className='formGraph' onClick={formCharts}>Graph</Button>} */}
                     {/* {questions.length > 0 && <Button variant='contained' className='deleteForm' onClick={deleteForm}>Update</Button>} */}
                     {questions.length > 0 && <Button variant='contained' className='updateForm' startIcon={editMode ? <EditOffOutlinedIcon/> : <ModeEditOutlineOutlinedIcon/>} onClick={toggleEdit}>{editMode ? 'Stop editing' : 'Edit form'}</Button>}
                     {questions.length > 0 && 

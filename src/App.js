@@ -28,7 +28,7 @@ function App() {
        <Route path="/preview" element={<Layout><PreviewForm sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> </Layout>}/>
        <Route path="/update/:id" element={<UpdateForm sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> }/>
       
-       <Route path="/teval/forms/:id" element={<PreviewOneForm sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> }/>
+       <Route path="/forms/:id" element={<PreviewOneForm sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> }/>
        <Route path="/graphs/:id" element={<Graph sent={sent} setSent={setSent} title={title} setTitle={setTitle}/> }/>
        <Route path="/previewgraphs" element={<Layout><PreviewBeforeAfter sent={sent} setSent={setSent} title={title} setTitle={setTitle}/></Layout> }/>
        <Route path="/previewfourgraphs" element={<Layout><PreviewQuad sent={sent} setSent={setSent} title={title} setTitle={setTitle}/></Layout> }/>

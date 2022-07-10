@@ -283,13 +283,24 @@ const FormQuestions = (props) => {
             <div className="first-division">
                <TextField
                 name="service"
+                id={index}
                 type="text"
                 label="Objective statement"
                 fullWidth={true}
                 value={singleService.service}
                 variant="outlined"
                 onChange={(e) => handleServiceChange(e, index)}
-                onKeyPress={(e) => e.key === 'Enter' && handleServiceAdd()}
+                onKeyPress={(e) =>{
+                   if(e.key === 'Enter' ) {
+                      
+                      handleServiceAdd()
+                      setTimeout(() => {
+                        const nextThing = document.getElementById((e.target.id * 1) + 1)
+                        nextThing.focus()
+                      }, 30)
+                      
+                   } 
+                }}
                 required
               /> 
               

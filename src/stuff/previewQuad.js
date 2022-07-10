@@ -97,19 +97,19 @@ let [canRenderValue, setCanRenderValue] = useState(false)
             
                 for(const key in data) {
                     console.log()
-                    if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] !== 'after' ) {
+                    if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] !== 'after' ) {
                        
                         
                         setCurrentFormName(currentFormName = data[key].title)
                         
                         setCurrentFormUid(currentFormUid = data[key].form_uid)
                         setCurrentFormId(currentFormId = data[key].form_id)
-                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] === 'after') {
+                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] === 'after') {
                         setAfterCurrentFormUid(afterCurrentFormUid = data[key].form_uid)
-                    } else if(data[key].title.toLowerCase().split('-')[0].split('boss')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] === 'after' && data[key].title.toLowerCase().split('-')[0].split('boss').length >= 2) {
+                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] === 'after' && data[key].title.toLowerCase().split('-').split('360').length >= 2) {
                         console.log('asda')
                         setCopyAfterCurrentFormUid(copyAfterCurrentFormUid = data[key].form_uid)
-                    } else if(data[key].title.toLowerCase().split('-')[0].split('boss')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] === 'before' && data[key].title.toLowerCase().split('-')[0].split('boss').length >= 2) {
+                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] === 'before' && data[key].title.toLowerCase().split('-').split('360').length >= 2) {
                         
                         setCopyCurrentFormUid(copyCurrentFormUid = data[key].form_uid)
                     }
@@ -392,10 +392,10 @@ let [canRenderValue, setCanRenderValue] = useState(false)
            
             for(const key in data) {
                     
-                    if(data[key].title && data[key].title.split('-')[1] !== 'after' && data[key].title.split('-')[0].split('boss').length >= 2) {
+                    if(data[key].title && data[key].title.split('-')[1] !== 'after' && data[key].title.split('-')[0].split('360').length >= 2) {
                         
                         form.push(
-                            data[key].title.split('-')[0].split('boss')[0]
+                            data[key].title.split('-')[0].split('360')[0]
                           )
                           formIds.push(
                               data[key].form_id

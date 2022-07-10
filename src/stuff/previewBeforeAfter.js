@@ -73,14 +73,14 @@ const PreviewBeforeAfter = () => {
             
                 for(const key in data) {
                 
-                    if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] !== 'after') {
+                    if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] !== 'after') {
                        
                         
                         setCurrentFormName(currentFormName = data[key].title)
                         
                         setCurrentFormUid(currentFormUid = data[key].form_uid)
                         setCurrentFormId(currentFormId = data[key].form_id)
-                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[1] === 'after') {
+                    } else if(data[key].title.toLowerCase().split('-')[0] === searched.toLowerCase() && data[key].title.toLowerCase().split('-')[2] === 'after') {
                         setAfterCurrentFormUid(afterCurrentFormUid = data[key].form_uid)
                     }
                     
@@ -270,7 +270,7 @@ const PreviewBeforeAfter = () => {
            
             for(const key in data) {
                     
-                    if(data[key].title && data[key].title.split('-')[1] !== 'after') {
+                    if(data[key].title && data[key].title.split('-')[2] !== 'after') {
                         form.push(
                             data[key].title.split('-')[0]
                           )
@@ -294,7 +294,7 @@ const PreviewBeforeAfter = () => {
                    
                         
                         for(const key in data2) {
-                            if((data2[key].formid * 1) === formIds[i] && !realForms.includes(form[i]) && form[i].split('boss').length === 1) {
+                            if((data2[key].formid * 1) === formIds[i] && !realForms.includes(form[i]) && form[i].split('360').length === 1) {
                                 realForms.push(form[i])
                                 forms.push(form[i])
                             }
@@ -311,7 +311,7 @@ const PreviewBeforeAfter = () => {
               }
 
             for(let i = 0; i < form.length; i++) {
-              console.log(form[i].split('boss'))
+              console.log(form[i].split('360'))
               
             }
               

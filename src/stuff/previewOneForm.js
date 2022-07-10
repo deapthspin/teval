@@ -193,7 +193,7 @@ const PreviewOneForm = () => {
         startForm()
         setTimeout(() => {
             setCanRender(canRender = true)
-        }, 100)
+        }, 1100)
     }, [])
 
     return (
